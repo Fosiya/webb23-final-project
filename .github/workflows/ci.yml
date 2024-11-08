@@ -1,8 +1,8 @@
 name: CI
 
 on:
+push:
   pull_request:
-  push: #test
     branches:
       - main  
 
@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.2.0  
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v4.2.0  
         with:
           python-version: '3.10'
 
